@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { createContext } from 'react';
+import { CssBaseline } from '@material-ui/core';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import RootStore from './store';
+
+const store = RootStore.create({});
+export const StoreContext = createContext(store);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <StoreContext.Provider value={store}>
+      <CssBaseline />
+      <App />
+    </StoreContext.Provider>,
   document.getElementById('root')
 );
-
-reportWebVitals();
