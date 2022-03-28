@@ -17,7 +17,7 @@ const Header = () => {
     <AppBar position="static">
       <Grid containter={{ justify: "space-between", alignItems: "center" }}>
         <Grid item>
-          <Typography variant="h6">Dashboard</Typography>
+          <Typography component={'span'} variant="h6">Dashboard</Typography>
         </Grid>
         <Grid item>
           <Box display="flex" alignItems="center">

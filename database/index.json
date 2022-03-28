@@ -135,12 +135,6 @@
           "title": "Task 1",
           "description": "Task 1 description",
           "assignee": "3"
-        },
-        {
-          "id": "ce2eb823-9dbe-4aa5-897f-dae73b89ca56",
-          "title": "asd",
-          "description": "asd",
-          "assignee": "1"
         }
       ],
       "id": "BACKLOG"
@@ -151,6 +145,12 @@
           "id": "4",
           "title": "Task 4",
           "description": "5555",
+          "assignee": "1"
+        },
+        {
+          "id": "ce2eb823-9dbe-4aa5-897f-dae73b89ca56",
+          "title": "asd",
+          "description": "asd",
           "assignee": "1"
         }
       ],

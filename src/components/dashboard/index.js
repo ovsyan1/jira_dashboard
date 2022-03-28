@@ -1,4 +1,5 @@
 import { observer } from "mobx-react-lite";
+import { toJS } from 'mobx';
 import useStore from "../../hooks/useStore";
 import { Box, Button, Grid, Paper, Typography } from "@material-ui/core";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
@@ -9,6 +10,7 @@ import NewTaskDialog from "./NewTaskDialog";
 const Dashboard = () => {
   const [newTaskToSection, setNewTaskToSection] = useState(null);
   const { boards } = useStore();
+  console.log(toJS(boards));
 
   const getListStyle = (isDraggingOver) => ({
     backgroundColor: isDraggingOver ? "lightblue" : "lightgray",
@@ -40,7 +42,7 @@ const Dashboard = () => {
                     justifyContent="space-between"
                     alignItems="center"
                   >
-                    <Typography variant="h5">{section?.title}</Typography>
+                    <Typography component={'span'} variant="h5">{section?.title}</Typography>
                     <Button variant="outlined" color="primary" onClick={() => {
                       setNewTaskToSection(section.id)
                     }}>
